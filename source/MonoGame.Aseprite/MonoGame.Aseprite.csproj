@@ -2,7 +2,7 @@
 
     <!-- Project level compilation properties -->
     <PropertyGroup>
-        <TargetFrameworks>net8.0-windows</TargetFrameworks>
+        <TargetFrameworks>net6.0;net8.0</TargetFrameworks>
         <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     </PropertyGroup>
 
@@ -26,6 +26,7 @@
     <!-- NuGet Package References -->
     <ItemGroup>
         <PackageReference Include="AsepriteDotNet" Version="1.7.4" />
+        <PackageReference Include="MonoGame.Framework.DesktopGL" Version="3.8.1.303" PrivateAssets="All" />
     </ItemGroup>
 
     <!-- Allow Test project to access internals -->
@@ -37,10 +38,6 @@
         <AssemblyAttribute Include="System.Runtime.CompilerServices.InternalsVisibleTo">
             <_Parameter1>MonoGame.Aseprite.Content.Pipeline</_Parameter1>
         </AssemblyAttribute>
-    </ItemGroup>
-    
-    <ItemGroup>
-      <ProjectReference Include="..\..\..\MonoGameModified\MonoGame.Framework\MonoGame.Framework.WindowsDX.csproj" />
     </ItemGroup>
 
     <!-- Warning Suppressions -->
