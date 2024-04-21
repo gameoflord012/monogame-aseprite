@@ -2,7 +2,7 @@
 
     <!-- Project level compilation properties -->
     <PropertyGroup>
-        <TargetFramework>net6.0-windows</TargetFramework>
+        <TargetFramework>net8.0-windows</TargetFramework>
     </PropertyGroup>
 
     <!-- Project level package properties -->
@@ -23,10 +23,11 @@
 
     <!-- NuGet Package References -->
     <ItemGroup>
-        <PackageReference Include="MonoGame.Framework.Content.Pipeline" Version="3.8.1.303" PrivateAssets="All" />
-
         <PackageReference Include="AsepriteDotNet" Version="1.7.4" />
-
-        <PackageReference Include="MonoGame.Framework.WindowsDX" Version="3.8.1.303" />
+    </ItemGroup>
+    
+    <ItemGroup>
+      <ProjectReference Include="..\..\..\MonoGameModified\MonoGame.Framework.Content.Pipeline\MonoGame.Framework.Content.Pipeline.csproj" PrivateAssets="All" />
+      <ProjectReference Include="..\..\..\MonoGameModified\MonoGame.Framework\MonoGame.Framework.WindowsDX.csproj" PrivateAssets="All" />
     </ItemGroup>
 </Project>
